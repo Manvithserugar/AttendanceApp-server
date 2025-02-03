@@ -83,6 +83,7 @@ app.post("/students", (req, res) => {
   newStudent.consecutiveCount = 0;
   newStudent.streakOfFour = 0;
   newStudent.dates = [];
+  newStudent.paidDates = "";
   students.push(newStudent);
   writeData({ students });
   res.status(201).send();
@@ -97,6 +98,8 @@ app.put("/students/:id", (req, res) => {
       student.name = updateBody.name;
       student.email = updateBody.email;
       student.phone = updateBody.phone;
+      if (updateBody.lastPaidDate !== student.lastPaidDate)
+        student.lastPaidDate = updateBody.lastPaidDate;
     }
     return student;
   });
