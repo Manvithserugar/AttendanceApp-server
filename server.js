@@ -30,9 +30,23 @@ const writeData = (data) => {
   fs.writeFileSync(dataFile, JSON.stringify(data, null, 2));
 };
 
-app.post("/students/attendance/date", (req, res) => {
+// const VALID_ACCESS_TOKEN = process.env.VALID_ACCESS_TOKEN;
+const VALID_ACCESS_TOKEN = "myToken";
+
+const checkAccessToken = (req, res, next) => {
+  const token = req.headers["access-token"];
+  if (!token) {
+    return res.status(401).json({ error: "Access token is missing" });
+  }
+  if (token !== VALID_ACCESS_TOKEN) {
+    return res.status(403).json({ error: "Invalid access token" });
+  }
+  next();
+};
+
+app.post("/students/attendance/date", [checkAccessToken], (req, res) => {
+  let { students } = readData();
   if (req.body.date) {
-    let { students } = readData();
     const attendanceForDate = students.filter((student) =>
       student.dates.includes(req.body.date)
     );
@@ -42,7 +56,6 @@ app.post("/students/attendance/date", (req, res) => {
     if (!attendanceForDate) return res.status(204).send();
     res.json(attendanceForDate);
   } else {
-    let { students } = readData();
     students = students.map((student) => {
       student.dates = student.dates.slice(-4);
       return student;
@@ -51,7 +64,7 @@ app.post("/students/attendance/date", (req, res) => {
   }
 });
 
-app.get("/students/:id", (req, res) => {
+app.get("/students/:id", checkAccessToken, (req, res) => {
   let { students } = readData();
   const studentId = parseInt(req.params.id);
   const studentData = students.find((student) => student.id === studentId);
@@ -64,7 +77,7 @@ app.get("/students/:id", (req, res) => {
   res.json(student);
 });
 
-app.post("/students", (req, res) => {
+app.post("/students", checkAccessToken, (req, res) => {
   const newStudent = req.body;
   let { students } = readData();
   if (
@@ -89,7 +102,7 @@ app.post("/students", (req, res) => {
   res.status(201).send();
 });
 
-app.put("/students/:id", (req, res) => {
+app.put("/students/:id", checkAccessToken, (req, res) => {
   let { students } = readData();
   const studentId = parseInt(req.params.id);
   const updateBody = req.body;
@@ -107,7 +120,7 @@ app.put("/students/:id", (req, res) => {
   res.json(updateBody);
 });
 
-app.delete("/students/:id", (req, res) => {
+app.delete("/students/:id", checkAccessToken, (req, res) => {
   let { students } = readData();
   const studentId = parseInt(req.params.id);
   students = students.filter((student) => student.id !== studentId);
@@ -115,7 +128,7 @@ app.delete("/students/:id", (req, res) => {
   res.status(204).send();
 });
 
-app.post("/students/attendance", (req, res) => {
+app.post("/students/attendance", checkAccessToken, (req, res) => {
   let { date, Ids } = req.body;
   let { students } = readData();
 
@@ -136,7 +149,7 @@ app.post("/students/attendance", (req, res) => {
   res.status(201).send();
 });
 
-app.delete("/students/attendance", (req, res) => {
+app.delete("/students/attendance", checkAccessToken, (req, res) => {
   students = readData();
   students = students.map((student) => {
     student.total = 0;
@@ -149,7 +162,7 @@ app.delete("/students/attendance", (req, res) => {
   res.status(200).send();
 });
 
-app.delete("/students", (req, res) => {
+app.delete("/students", checkAccessToken, (req, res) => {
   writeData({ students: [] });
   res.status(200).send();
 });

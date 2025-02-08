@@ -2,11 +2,11 @@
   "students": [
     {
       "id": 1,
-      "name": "Aarav Patel",
+      "name": "Aarav Patelll",
       "email": "student1@example.com",
       "phone": "123-456-7890",
-      "total": 12,
-      "consecutiveCount": 0,
+      "total": 13,
+      "consecutiveCount": 1,
       "streakOfFour": 3,
       "dates": [
         "2025-01-25",
@@ -25,17 +25,18 @@
         "2025-02-02",
         "2025-02-02",
         "2025-02-02",
-        "2025-02-02"
+        "2025-02-02",
+        "2025-02-08"
       ],
-      "lastPaidDate": "2025-02-01"
+      "lastPaidDate": "2025-02-08"
     },
     {
       "id": 2,
       "name": "Aditi Sharma",
       "email": "student2@example.com",
       "phone": "987-654-3210",
-      "total": 12,
-      "consecutiveCount": 0,
+      "total": 13,
+      "consecutiveCount": 1,
       "streakOfFour": 3,
       "dates": [
         "2025-01-30",
@@ -49,7 +50,8 @@
         "2025-02-02",
         "2025-02-02",
         "2025-02-02",
-        "2025-02-03"
+        "2025-02-03",
+        "2025-02-08"
       ],
       "lastPaidDate": "2025-02-03"
     },
@@ -58,9 +60,9 @@
       "name": "Rohan Singh",
       "email": "student3@example.com",
       "phone": "555-123-4567",
-      "total": 11,
-      "consecutiveCount": 3,
-      "streakOfFour": 2,
+      "total": 12,
+      "consecutiveCount": 0,
+      "streakOfFour": 3,
       "dates": [
         "2025-01-27",
         "2025-01-30",
@@ -73,7 +75,8 @@
         "2025-02-02",
         "2025-02-02",
         "2025-02-02",
-        "2025-02-03"
+        "2025-02-03",
+        "2025-02-08"
       ],
       "lastPaidDate": ""
     },
@@ -82,9 +85,9 @@
       "name": "Preeti Verma",
       "email": "student4@example.com",
       "phone": "111-222-3333",
-      "total": 7,
-      "consecutiveCount": 3,
-      "streakOfFour": 1,
+      "total": 9,
+      "consecutiveCount": 1,
+      "streakOfFour": 2,
       "dates": [
         "2025-01-27",
         "2025-01-30",
@@ -93,7 +96,9 @@
         "2025-02-02",
         "2025-02-02",
         "2025-02-02",
-        "2025-02-02"
+        "2025-02-02",
+        "2025-02-04",
+        "2025-02-08"
       ],
       "lastPaidDate": "2025-02-01"
     },
@@ -102,16 +107,18 @@
       "name": "Aryan Kumar",
       "email": "student5@example.com",
       "phone": "444-555-6666",
-      "total": 6,
-      "consecutiveCount": 2,
-      "streakOfFour": 1,
+      "total": 8,
+      "consecutiveCount": 0,
+      "streakOfFour": 2,
       "dates": [
         "2025-01-30",
         "2025-02-02",
         "2025-02-02",
         "2025-02-02",
         "2025-02-03",
-        "2025-02-03"
+        "2025-02-03",
+        "2025-02-04",
+        "2025-02-08"
       ],
       "lastPaidDate": ""
     },
@@ -192,13 +199,14 @@
       "name": "Arjun Reddy",
       "email": "student11@example.com",
       "phone": "292-303-3132",
-      "total": 2,
-      "consecutiveCount": 2,
+      "total": 3,
+      "consecutiveCount": 3,
       "streakOfFour": 0,
       "dates": [
         "2025-01-27",
         "2025-02-02",
-        "2025-02-02"
+        "2025-02-02",
+        "2025-02-04"
       ],
       "lastPaidDate": ""
     },
@@ -207,11 +215,12 @@
       "name": "Sanya Nair",
       "email": "student12@example.com",
       "phone": "333-343-5363",
-      "total": 1,
-      "consecutiveCount": 1,
+      "total": 2,
+      "consecutiveCount": 2,
       "streakOfFour": 0,
       "dates": [
-        "2025-02-02"
+        "2025-02-02",
+        "2025-02-04"
       ],
       "lastPaidDate": ""
     },
@@ -220,26 +229,14 @@
       "name": "Vivaan Das",
       "email": "student13@example.com",
       "phone": "343-545-6564",
-      "total": 2,
-      "consecutiveCount": 2,
+      "total": 3,
+      "consecutiveCount": 3,
       "streakOfFour": 0,
       "dates": [
         "2025-01-27",
         "2025-02-02",
-        "2025-02-02"
-      ],
-      "lastPaidDate": ""
-    },
-    {
-      "id": 14,
-      "name": "Siya Bajaj",
-      "email": "student14@example.com",
-      "phone": "454-656-7675",
-      "total": 1,
-      "consecutiveCount": 1,
-      "streakOfFour": 0,
-      "dates": [
-        "2025-02-02"
+        "2025-02-02",
+        "2025-02-04"
       ],
       "lastPaidDate": ""
     },
@@ -261,12 +258,13 @@
       "name": "Myra Patel",
       "email": "student16@example.com",
       "phone": "676-878-9897",
-      "total": 1,
-      "consecutiveCount": 1,
+      "total": 2,
+      "consecutiveCount": 2,
       "streakOfFour": 0,
       "dates": [
         "2025-01-27",
-        "2025-02-03"
+        "2025-02-03",
+        "2025-02-07"
       ],
       "lastPaidDate": ""
     },
@@ -275,12 +273,13 @@
       "name": "Rishi Malhotra",
       "email": "student17@example.com",
       "phone": "787-989-0908",
-      "total": 1,
-      "consecutiveCount": 1,
+      "total": 2,
+      "consecutiveCount": 2,
       "streakOfFour": 0,
       "dates": [
         "2025-01-27",
-        "2025-02-03"
+        "2025-02-03",
+        "2025-02-07"
       ],
       "lastPaidDate": ""
     },
@@ -289,11 +288,12 @@
       "name": "Dev Sharma",
       "email": "student19@example.com",
       "phone": "909-101-1110",
-      "total": 0,
-      "consecutiveCount": 0,
+      "total": 1,
+      "consecutiveCount": 1,
       "streakOfFour": 0,
       "dates": [
-        "2025-01-27"
+        "2025-01-27",
+        "2025-02-07"
       ],
       "lastPaidDate": ""
     },
@@ -302,10 +302,12 @@
       "name": "Tara Kapoor",
       "email": "student20@example.com",
       "phone": "111-121-1312",
-      "total": 0,
-      "consecutiveCount": 0,
+      "total": 1,
+      "consecutiveCount": 1,
       "streakOfFour": 0,
-      "dates": [],
+      "dates": [
+        "2025-02-07"
+      ],
       "lastPaidDate": ""
     },
     {
@@ -313,10 +315,12 @@
       "email": "dg@sfg.com",
       "phone": "222333444555",
       "id": 21,
-      "total": 0,
-      "consecutiveCount": 0,
+      "total": 1,
+      "consecutiveCount": 1,
       "streakOfFour": 0,
-      "dates": [],
+      "dates": [
+        "2025-02-07"
+      ],
       "lastPaidDate": ""
     },
     {
@@ -324,10 +328,12 @@
       "email": "sheenu@gmail.com",
       "phone": "778-888-999",
       "id": 23,
-      "total": 0,
-      "consecutiveCount": 0,
+      "total": 1,
+      "consecutiveCount": 1,
       "streakOfFour": 0,
-      "dates": [],
+      "dates": [
+        "2025-02-04"
+      ],
       "lastPaidDate": ""
     },
     {
@@ -335,11 +341,12 @@
       "email": "neemu@gmail.com",
       "phone": "345-555-777",
       "id": 24,
-      "total": 2,
-      "consecutiveCount": 2,
+      "total": 3,
+      "consecutiveCount": 3,
       "streakOfFour": 0,
       "dates": [
-        "2025-01-30"
+        "2025-01-30",
+        "2025-02-04"
       ],
       "lastPaidDate": "2025-02-02"
     }
